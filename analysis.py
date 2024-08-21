@@ -1,14 +1,12 @@
+# Groupby & Pivot Table in pandas
+
 import pandas as pd
-
-#Problem 1
-
 data = {
     'Date': ['2024-08-01', '2024-08-01', '2024-08-02', '2024-08-02', '2024-08-03', '2024-08-03'],
     'Category': ['Electronics', 'Clothing', 'Electronics', 'Clothing', 'Electronics', 'Clothing'],
     'Product': ['TV', 'Shirt', 'Phone', 'Jacket', 'TV', 'Shirt'],
     'Units Sold': [10, 20, 15, 5, 7, 12]
 }
-
 df = pd.DataFrame(data)
 
 # Task 1: Group the data by Category and calculate the total units sold for each category.
@@ -60,7 +58,6 @@ print(total_sales_by_region)
 
 max_salary_by_sp = df.loc[df.groupby("Region")["Sales"].idxmax()] #I used the idxmax() function to see the maximum values ​​on a Salesperson basis. df.loc was used to access group rows and columns.
 print(max_salary_by_sp)
-
 
 # Problem 4
 
